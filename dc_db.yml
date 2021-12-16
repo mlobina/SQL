@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+    mariadb:
+        image: mariadb:10.5.13
+        container_name: mariadb
+        hostname: mariadb
+        command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+        ports:
+            - "3306:3306"
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_INITDB_SKIP_TZINFO: 1
+        volumes:
+           - /home/marina/docker_volume/mysql:/var/lib/mysql
+    postgres:
+        image: postgres:13.5-bullseye
+        container_name: postgres
+        hostname: postgres
+        ports:
+            - "5432:5432"
+        environment:
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=postgres
+        - PGDATA=/var/lib/postgresql/data/pgdata
+        restart: always
+        volumes:
+            - /home/marina/docker_volume/postgres:/var/lib/postgresql/data
