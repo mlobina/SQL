@@ -1,6 +1,16 @@
 {
     "sqltools.connections": [
         {
+            "previewLimit": 50,
+            "server": "127.0.0.1",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "postgres1",
+            "database": "postgres",
+            "username": "postgres",
+            "password": "postgres"
+        },
+        {
             "mysqlOptions": {
                 "authProtocol": "default"
             },
@@ -9,7 +19,7 @@
             "port": 3306,
             "driver": "MySQL",
             "name": "mysql1",
-            "database": "talently",
+            "database": "mysql",
             "username": "root",
             "password": "root"
         },
@@ -18,18 +28,8 @@
             "server": "127.0.0.1",
             "port": 5432,
             "driver": "PostgreSQL",
-            "name": "postgres1",
-            "database": "talently",
-            "username": "postgres",
-            "password": "postgres"
-        },
-        {
-            "previewLimit": 50,
-            "server": "127.0.01",
-            "port": 5432,
-            "driver": "PostgreSQL",
-            "name": "postgres2",
-            "database": "online_shop",
+            "name": "postgres3",
+            "database": "sales_example",
             "username": "postgres",
             "password": "postgres"
         },
@@ -41,8 +41,8 @@
             "server": "127.0.0.1",
             "port": 3306,
             "driver": "MySQL",
-            "name": "mysql2",
-            "database": "online_shop",
+            "name": "mysql3",
+            "database": "sales_example",
             "username": "root",
             "password": "root"
         }
